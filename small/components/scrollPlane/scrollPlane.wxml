@@ -1,0 +1,26 @@
+<!-- 组件模板 -->
+<view class="_components_container">
+  <scroll-view wx:if="{{showItem}}"
+     scroll-y class="_components_container_child _components_container_child_left" style="{{containerStyle}}" scroll-into-view="left_{{scrollLeftInViewId}}"
+     scroll-with-animation>
+         <view wx:for="{{planeList}}" wx:key="{{index}}"   
+          catchtap="_selectedThisItem"
+          data-selected-id="{{item.id}}"
+          id="left_{{item.id}}"
+          style="{{item.id===scrollLeftInViewId?'background-color:#DCDCDC':''}}">
+            {{item.value}}
+          </view>
+  </scroll-view>
+  <scroll-view 
+     scroll-y class="_components_container_child _components_container_child_right" style="{{containerStyle}}" scroll-into-view="right_{{scrollRightInViewId}}" bindscroll="_changePlane"
+     scroll-with-animation>
+        <view id="right_green" class="bg_green" data-selected-id="green"></view>
+        <view id="right_red" class="bg_red" data-selected-id="red"></view>
+        <view id="right_yellow" class="bg_yellow" data-selected-id="yellow"
+        style="height:2200rpx"></view>
+        <view id="right_blue" class="bg_blue" data-selected-id="blue"></view>
+        <view id="right_black" class="bg_black" data-selected-id="black"
+        style="height:3300rpx"></view>
+        <view id="right_orange" class="bg_orange" data-selected-id="orange"></view>
+  </scroll-view>
+</view> 

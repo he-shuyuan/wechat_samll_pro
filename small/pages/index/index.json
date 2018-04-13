@@ -1,0 +1,6 @@
+{
+ "usingComponents": {
+    "scroll-item": "/components/scrollItem/scrollItem",
+    "scroll-plane": "/components/scrollPlane/scrollPlane"
+  }
+ }

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+   <!--<scroll-item item-list="{{headList}}" style="width:100%"> </scroll-item>
+   <scroll-item item-list="{{headList}}" scroll-y> </scroll-item>-->
+   <scroll-plane plane-list="{{planeList}}" style="width:100%"> </scroll-plane>
+ 
+</view>

@@ -1,0 +1,26 @@
+  <view>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}({{userInfo.gender===1?'男':(userInfo.gender===2?'女':'未知')}})</text>
+      <text class="userinfo-nickname">
+         {{userInfo.city}}-{{userInfo.province}}-{{userInfo.country}}
+         </text>
+    </block>
+  </view>
+  <view>
+  <canvas 
+    canvas-id="myCanvas" 
+    style="border: 1px solid;margin:0 auto"
+    bindtouchstart="_start"
+    bindtouchmove="_move"
+    bindtouchend="_end"/>
+  画笔大小:<slider bindchange="_sliderChange" min="1" max="10" show-value/>
+  <picker bindchange="_pickerChange" value="{{currentColorIndex}}" range="{{colorList}}">
+    <view class="picker">
+      画笔颜色：{{colorList[currentColorIndex]}}
+    </view>
+  </picker>
+   </view>
+  </view>

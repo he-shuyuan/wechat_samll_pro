@@ -1,0 +1,17 @@
+<!-- 组件模板 -->
+<view class="_components_container" style="{{!scrollY?'width:100%':''}}">
+  <scroll-view 
+    scroll-x="{{!scrollY}}" scroll-y="{{scrollY}}"
+    class="{{!scrollY?'_list_ul_x':'_list_ul_y'}}">
+    <view wx:for="{{itemList}}"
+        id="{{item.id}}"
+        wx:key="{{index}}" 
+        class=" {{!scrollY?'_list_li_x':'_list_li_y'}}"
+        catchtap="_selectedThisItem" 
+        data-selected-no = "{{index}}"
+        style="{{currentSelectedNo===index?'background-color:#DCDCDC':''}}">
+       {{item.value}}
+   </view>
+  </scroll-view>
+  <slot></slot>
+</view> 

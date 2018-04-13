@@ -1,0 +1,28 @@
+._list_ul_x{
+   white-space: nowrap; /*不换行*/
+   display: flex;
+}
+._list_ul_y{
+ height:870rpx;
+}
+._list_li_x{
+  width:200rpx;
+  height:100rpx;
+  line-height:100rpx;
+  display:inline-block;
+  text-align:center;
+  border:0.1rpx solid #DCDCDC;
+}
+._list_li_x:hover{
+   background-color:#DCDCDC
+}
+._list_li_y{
+	 width:200rpx;
+	 height:200rpx;
+	 line-height:200rpx;
+	 text-align:center;
+	 border:0.1rpx solid #DCDCDC;
+}
+._list_li_y:hover{
+   background-color:#DCDCDC
+}
